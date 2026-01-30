@@ -2,10 +2,39 @@
 <html lang="es">
     <head> <!-- crea head y body de manera "separada"-->
         <meta charset="UTF-8"/> <!--charset es para especificar el tipo de caracteres que usaremos-->
-        <title>Deportes</title>
+        <title>Práctica</title>
+        <style>
+            .fondo-div1{
+                background-color: rgb(165, 163, 250);
+                font-weight: bold;
+            }
+            select{
+                box-shadow: 2px 2px blueviolet;
+            }
+            .fondo-div2{
+                background-color: rgb(35, 138, 138);
+                text-shadow: 2px 2px blueviolet;
+                color:bisque
+            }
+            .tamano-div2{
+                width: 10;
+                height: 10;
+                /*float: right;*/
+                display: inline-block;
+            }
+            .margen-der-div2{
+                margin-right: 1000px;
+            }
+            .margen-izq{
+                margin-left: 500px;
+            }
+            .margen-der{
+                margin-right: 500px;
+            }
+        </style>
     </head>
     <body>
-        <div>
+        <div class="fondo-div1 margen-izq margen-der">
         <table border="1">
             <caption> Personality chart </caption>
         <thead>
@@ -31,8 +60,9 @@
         <br>
         <br>
         </div>
-
-        <div>
+        <br>
+        <br>
+        <div class="fondo-div2 tamano-div2">
             <form action="" method="POST">
                 <label for="correo">Correo</label>
                 <input type="email" name="correo"/>

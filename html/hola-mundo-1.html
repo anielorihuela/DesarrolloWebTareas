@@ -14,22 +14,50 @@
                 background-color: black;
             }
             p{
-                color: palevioletred;
+                color: azure;
             }
-            <!---->
+            /* Esto es style por clases. Es una clase que contiene cierto estilo y
+            yo puedo decidir a qué se le aplica vs los ejemplos de arriba que 
+            automáticamente se lo añaden a todo lo que sea de esa etiqueta */
             .fondo-amarillo{
-                background-color: darkkhaki;
+                background-color: rgb(240, 187, 30);
+            }
+
+            #titulo-principal{
+                font-size: medium;
+            }
+            /* Jerarquía 
+            1. id (los que escribes en style con #)
+            2. clases (los que escribes en style con .)
+            3. etiquetas (las default como h1 o p) */
+
+            div{
+                background-color: rgb(189, 189, 247);
+                color: azure;
+            }
+            /* p es una etiqueta que ya le da color a los párrafos, CSS
+            aplicará eso en vez de lo que esté en div*/
+            .margen-arriba{
+                margin-top: 100px;
+            }
+            .margen-izquierdo{
+                margin-left: 50px;
+            }
+            .espacio-interno{
+                padding: 30px;
             }
         </style>
     </head>
     <body>
         <div> <!-- permite hacer bloques de tal forma que el estilo del bloque se aplique a todo lo que está dentro-->
+            <h1 id="titulo-principal" class="fondo-amarillo">Hello world</h1>
             <h1 class="fondo-amarillo">Hello world</h1>
             <a href="https://itam.mx" > ITAM </a> <!--Así se añaden links-->
             <p>Esta es mi <br> primera página web</p> <!--br da un salto de línea-->
         </div>
         <hr/>
-        <div>
+        <div class="margen-arriba margen-izquierdo"> <!--se pueden aplicar 2 clases a la vez-->
+            <!--si dos clases afectan el mismo atributo, html aplicará lo que haga la última clase-->
             <h2>Colmillo ITAM</h2>
             <img src=“colmillo1.jpg” alt="colmillo, la mascota del ITAM"/>
             <h2>comidas favoritas</h2>
@@ -44,6 +72,8 @@
                 <li>The office</li>
             </ol>
         </div>
-        
+        <div>
+            <p>holaaaaaaa</p>
+        </div>
     </body>
 </html>
