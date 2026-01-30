@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> <!-- crea head y body de manera "separada"-->
+        <meta charset="UTF-8"/> <!--charset es para especificar el tipo de caracteres que usaremos-->
+        <title>Deportes</title>
+    </head>
+    <body>
+        <div>
+        <table border="1">
+            <caption> Personality chart </caption>
+        <thead>
+            <tr>
+                <th>INFJ</th>
+                <th>ENTP</th>
+                <th>ENFJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Personaje A</td>
+                <td>Personaje B</td>
+                <td>Personaje C</td>
+            </tr>
+            <tr>
+                <td>Personaje 1</td>
+                <td colspan="2">Personaje 2</td>
+                
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <br>
+        </div>
+
+        <div>
+            <form action="" method="POST">
+                <label for="correo">Correo</label>
+                <input type="email" name="correo"/>
+                <br>
+                <br>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" name="contrasena"/>
+                <br>
+                <br>
+                <button>Enviar</button>
+                <br>
+                <br>
+                <label for="genero">Género</label>
+                <select name="genero">
+                    <option value="0">Mujer</option>
+                    <option value="1">Hombre</option>
+                    <option value="3">No binario</option>
+                    <option value="4">British</option>
+                </select>
+                <br>
+                <br>
+                <label for="comentarios">Comentarios</label>
+                <textarea name="comentarios"></textarea>
+                <br>
+                <br>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>
+
