@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .hidden {
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button onclick="saludar()">Saludar</button>
+        <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+        <button onclick="cambiarColor()">Cambiar color</button>
+        <button onclick="mostrarImagen()">Mostrar imagen</button>
+        <button onclick="ocultarImagen()">Ocultar imagen</button>
+        <img id="fotoTuxSam" src="tux_sam.jpg" class="hidden">
+        <p id="mensaje"></p> <!-- le podemos asignar un id a las cosas-->
+        <script>
+            function saludar(){
+                alert("Holaaaa");
+            }
+
+            function mostrarMensaje(){
+                // creamos una variable que guarde el cuadro de texto "mensaje"
+                const mensajeElemento = document.getElementById("mensaje"); 
+                // imprimimos en consola
+                console.log(
+                    "elemento antes de cambiar el texto", 
+                    //agarramos como tal el contenido del párrafo
+                    JSON.stringify(mensajeElemento.textContent)); 
+                //cambiamos el contenido
+                mensajeElemento.textContent = "Has hecho click!"; 
+                //volvemos a imprimir
+                console.log(
+                    "elemento después de cambiar el texto", 
+                    JSON.stringify(mensajeElemento.textContent));
+            }
+            
+            function cambiarColor(){
+                //cambiar el color del mensaje a rojo
+                const mensajeColor = document.getElementById("mensaje");
+                console.log(
+                    "elemento antes de cambiar el color", 
+                    //agarramos como tal el contenido del párrafo
+                    "color sin cambiar"); 
+                mensajeColor.style.color = "red";
+                console.log(
+                    "elemento después de cambiar el color", 
+                    "color cambiado");
+            }
+            
+            function mostrarImagen(){
+                imagenTux = document.getElementById("fotoTuxSam");
+                imagenTux.style.display = "block";
+            }
+
+            function ocultarImagen(){
+                imagenTux = document.getElementById("fotoTuxSam");
+                imagenTux.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

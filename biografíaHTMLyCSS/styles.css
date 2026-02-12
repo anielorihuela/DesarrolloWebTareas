@@ -1,0 +1,111 @@
+      body{
+        background-color: rgb(252, 220, 238);
+      }
+      p{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 50px;
+        color: rgb(183, 27, 183);
+      }
+      .headerSitio{
+        color:rgb(183, 27, 183);
+        text-align: center;
+      }
+
+      .mainContent{
+        padding-left: 50px;
+        padding-right: 50px;
+        color: cadetblue;
+      }
+
+      .footerSitio{
+        color:blue
+      }
+
+      .bio{
+        background-color: rgb(161, 230, 246);
+        border: 6px solid yellow;
+      }
+      .contacto{
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+      }
+      .exitos{
+        color: aquamarine;
+      }
+      .exitosCanciones{
+        display: flex;
+        gap: 70px;
+      }
+      .card{
+        color: rgb(183, 27, 183);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        font-family: Impact;
+        text-align: center;
+        align-items: center;
+        width: 250px;
+        height: auto;
+        border: dotted rgb(119, 0, 255);
+        box-shadow: 5px 5px 12px rgb(203, 20, 213);
+      }
+      .galeria{
+        color: rgb(183, 27, 183);
+      }
+      .titulo{
+        text-align: center;
+        color: rgb(183, 27, 183);
+        text-shadow: 3px 3px 6px rgb(94, 211, 243);
+      }
+      .highlight {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      .linkBonito{
+        color: yellow;
+      }
+      .linkBonito:hover {
+        color: #a522f1;
+        cursor: pointer;
+      }
+      .linkBonito2{
+        color: rgb(183, 27, 183);
+      }
+      .linkBonito2:hover {
+        color: #f1c122;
+        cursor: pointer;
+      }
+      .cardFotos{
+        padding-left: 6px;
+        padding-right: 6px;
+        width: 170px;
+        height: auto;
+        align-items:normal;
+      }
+      .boton{
+        background-color: rgb(236, 131, 252);
+        border-radius: 8px;
+      }
+      .boton:hover{
+        background-color: aqua;
+      }
+      .labelCorreo{
+        color:rgb(183, 27, 183);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      @media (max-width: 400px) {
+        .ocultarImagenes{
+            display: none;
+        }
+      }
+      @media (max-width: 700px){
+        .cambioBioFondo700{
+            background-color: rgb(249, 240, 255);
+        }
+      }
+      @media (max-width: 300px){
+        .cambioFondo300{
+            background-color: yellow
+        }
+      }
