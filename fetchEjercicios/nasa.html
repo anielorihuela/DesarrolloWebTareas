@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nasa</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div id="info"></div>
+
+        <script>
+            function formatearDatos(carta){
+                const res=
+                    '<div class="card" style="width: 18rem;">'+
+                    '<img src="'+ carta.hdurl+ '" class="card-img-top" alt="...">'+
+                    '<div class="card-body">'+
+                    '<h5 class="card-title">'+ carta.title+'</h5>'+
+                        '<p class="card-text">'+carta.explanation+'</p>'+
+                        '<a href="#" class="btn btn-primary">Go somewhere</a>'+
+                    '</div>'+
+                    '</div>';
+                return res;
+            }
+            function obtenerDatosNasa(){
+                fetch("https://api.nasa.gov/planetary/apod?api_key=tgdsyrFY4dOvO69tbU0xn8whYhC1BWDP9J80faL7")
+                .then((res) => res.json())
+                .then((datos) => {
+                    const contenedor = document.getElementById("info");
+                    const datosFormateados = formatearDatos(datos);
+                    contenedor.innerHTML = datosFormateados;
+                })
+                .catch((error) =>
+                    console.error("Error al obtener los datos:", error),
+                );
+                
+            }
+            obtenerDatosNasa();
+        </script>
+    </body>
+</html>

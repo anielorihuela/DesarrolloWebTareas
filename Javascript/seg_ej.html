@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Ejemplo de Local Storage</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejemplo de Local Storage</title>
+  </head>
 
-    <body>
-        <input type="text" id="nombrePersona">
-        <br>
-        <br>
-        <button onclick="guardarDatos()">Guardar datos</button>
-        <button onclick="muestraMensaje()">Mostrar datos</button>
-        <textarea id="nombreMostrar">Aquí aparecerá lo guardado</textarea>
-        <script>
-            function guardarDatos(){
-                const nombreP = document.getElementById("nombrePersona");
-                console.log(nombreP.value);
-                localStorage.setItem("nombre", (nombreP.value)); // IMPORTANTE: .value y NO .textcontent
-            }
+  <body>
+    <input type="text" id="nombrePersona" />
+    <br />
+    <br />
+    <button onclick="guardarDatos()">Guardar datos</button>
+    <button onclick="muestraMensaje()">Mostrar datos</button>
+    <textarea id="nombreMostrar">Aquí aparecerá lo guardado</textarea>
+    <script>
+      function guardarDatos() {
+        const nombreP = document.getElementById("nombrePersona");
+        console.log(nombreP.value);
+        localStorage.setItem("nombre", nombreP.value); // IMPORTANTE: .value y NO .textcontent
+      }
 
-            function muestraMensaje(){
-                const nombre = localStorage.getItem("nombre");
-                //alert(`Hola ${nombre}`); // es con la comilla que parece inclinada `
-                const texto = document.getElementById("nombreMostrar");
-                texto.value = nombre;
-            }
-        </script>
-    </body>
+      function muestraMensaje() {
+        const nombre = localStorage.getItem("nombre");
+        //alert(`Hola ${nombre}`); // es con la comilla que parece inclinada `
+        const texto = document.getElementById("nombreMostrar");
+        texto.value = nombre;
+      }
+    </script>
+  </body>
 </html>
