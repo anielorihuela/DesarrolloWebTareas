@@ -1,0 +1,3 @@
+async function fetchSolicitudes(params) {
+    
+}
