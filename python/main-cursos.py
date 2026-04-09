@@ -54,7 +54,10 @@ alumnos_en_memoria = {}
 @app.post("/v1/curso")
 def crear_curso(curso: CursoDTO):
     id_generado = generar_guid()
-    cursos_en_memoria[id_generado] = {"id": id_generado, "nombre": curso.nombre}
+    cursos_en_memoria[id_generado] = {
+        "id": id_generado, 
+        "nombre": curso.nombre
+        }
     return cursos_en_memoria[id_generado]
 
 @app.get("/v1/cursos")

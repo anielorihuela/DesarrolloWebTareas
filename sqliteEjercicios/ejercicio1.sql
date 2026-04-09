@@ -1,0 +1,1 @@
+create table estados(id integer primary key autoincrement, nombre text not null);

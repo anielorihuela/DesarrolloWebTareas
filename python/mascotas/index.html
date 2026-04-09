@@ -3,8 +3,32 @@
     <head>
         <meta charset="utf-8">
     </head>
-        
-    <body>
 
+    <body>
+        <h1>Ejercicio mascotas</h1>
+        <h2>Todas las solicitudes</h2>
+        <div id="infoFetchSolicitudes"></div>
+        <button id="butSolicitudes">Fetch solicitudes</button>
+
+        <br><br>
+        <h2>Llenar formulario</h2>
+        <form>
+            <label for="nombrePersona"">Nombre</label>
+            <input type="text" id="nombrePersona"><br><br>
+            <label for="mascotaDeseada"">Mascota deseada</label>
+            <input type="text" id="mascotaDeseada"><br><br>
+            <label for="motivo"">Motivo</label>
+            <input type="text" id="motivo"><br><br>
+            <button id="butMandarSolicitud">Mandar</button>
+        </form>
+
+        <h2>Cambios a la solicitud</h2>
+        <form>
+            <label id="cambiarMotivo">Cambiar motivo</label>
+            <input type="text" id="cambiarMotivo"><br><br>
+            <label id="cambiarMascota">Cambiar mascota</label>
+            <input type="text" id="cambiarMotivo"><br><br>
+        </form>
+        <script src="script.js"></script>
     </body>
 </html>
