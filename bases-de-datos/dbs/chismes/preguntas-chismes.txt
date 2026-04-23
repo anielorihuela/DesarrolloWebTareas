@@ -42,10 +42,11 @@ GROUP BY strftime('%Y', fecha), strftime('%m', fecha)
 
 
 11. Años donde se dijeron más de 12 chismes
-SELECT strftime('%Y', fecha), COUNT(chisme) AS total_chismes
-FROM chismes
-GROUP BY strftime('%Y', fecha)
-HAVING total_chismes > 12
+select strftime('%Y', fecha) as anio,
+count(*) as tot_chismes
+from chismes
+group by strftime('%Y', fecha)
+having count(*)>12;
 
 12. Suma total de dinero pagado por silencio
 SELECT strftime('%m', fecha) as anio, SUM(monto_silencio) as total_pagado
